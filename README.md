@@ -24,8 +24,8 @@ Please follow the steps below and turn it in to us when you are done!
     - Bonus points: infinite scroll or pagination.
   - [ ] Single Movie Post (Featured image, title, genre, full text)
     - Bonus points: Showcase other movies.
-  - [ ] Single Post (Featured image, title, text)
-  - [ ] Single Page (Can be just title, text)
+  - [ ] Single Post (Featured image, author, title, text)
+  - [ ] Single Page (Can be just title, author and text)
   - Bonus points: Hot or live refresh.
 - [ ] Add SCSS compiling in and style your React app.
 - [ ] Uglify your JavaScript/SCSS build
