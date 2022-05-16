@@ -41,7 +41,7 @@ If you need to run any wp-cli commands, it is available via either `npx wp-env r
   - [ ] Single Page (Can be just title, author and text)
   - Bonus points: Hot or live refresh.
 - [ ] Add SCSS compiling in and style your React app.
-- [ ] Uglify your JavaScript/SCSS build
+  - Bonus points: Uglify your JavaScript/SCSS build
 - [ ] Add instructions on requirements, installation and running everything to your README file.
 
 ## Requirements
