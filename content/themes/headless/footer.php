@@ -1,4 +1,10 @@
-            </main><!-- #main -->
+<?php
+/**
+ * Footer template.
+ */
+
+?>
+			</main><!-- #main -->
 		</section><!-- #primary -->
 	</div><!-- #content -->
 
