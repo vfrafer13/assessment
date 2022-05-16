@@ -1,6 +1,6 @@
-# Headless WordPress Assessment
+# Intermediate WordPress Assessment
 
-This is the assessment for incoming developers aimed toward experience with WordPress combined with a JavaScript-centric front-end.
+This is the assessment for incoming developers aimed toward intermediate experience with WordPress.
 
 Please follow the steps below and turn it in to us when you are done!
 
@@ -16,7 +16,7 @@ Please follow the steps below and turn it in to us when you are done!
 
 **Away We Go!**
 
-In a few minutes, you should have a fresh WordPress install up and running with a simple theme named Headless Theme activated. The service assumes it can run on port 8888, so if there's a conflict there, you'll have to edit `.wp-env.json`, run `npm run env:destroy` and then re-run `npm run env:init`.
+In a few minutes, you should have a fresh WordPress install up and running with a simple theme named WordPress Assessment activated. The service assumes it can run on port 8888, so if there's a conflict there, you'll have to edit `.wp-env.json`, run `npm run env:destroy` and then re-run `npm run env:init`.
 
 Any changes made to the `./content/` folder will show up on the WordPress install.
 

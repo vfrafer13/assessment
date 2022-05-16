@@ -12,6 +12,7 @@
         Log in to admin at <a href="/wp-admin/">/wp-admin/</a>
         with username <strong>admin</strong> and password <strong>password</strong>.
     </div>
+    <div id="app"></div>
 </div>
 <?php
 get_footer();
