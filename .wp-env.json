@@ -1,7 +1,5 @@
 {
-    "core": "WordPress/WordPress#master",
     "mappings": {
       "wp-content/": "./content/"
-    },
-    "phpVersion": "8.0"
+    }
 }
