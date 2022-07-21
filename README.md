@@ -13,6 +13,7 @@ Please follow the steps below and turn it in to us when you are done!
 1. Clone this repo and cd into the directory.
 1. Run `npm install`
 1. Run `npm run env:init`
+1. Run `npm run env:launch`
 
 **Away We Go!**
 
