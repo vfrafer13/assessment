@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is the assessment for incoming developers aimed toward experience with WordPress combined with a JavaScript-centric front-end.",
   "devDependencies": {
-    "@wordpress/env": "^4.6.0",
-    "@wordpress/scripts": "^23.0.0"
+    "@wordpress/env": "4.9.0",
+    "@wordpress/scripts": "^23.5.0"
   },
   "engines": {
     "node": "~16",
@@ -14,8 +14,10 @@
     "assets:build": "wp-scripts build --webpack-src-dir=./content/themes/assessment/assets/src/ --output-path=./content/themes/assessment/assets/build",
     "assets:watch:hot": "wp-scripts start --webpack-src-dir=./content/themes/assessment/assets/src/ --output-path=./content/themes/assessment/assets/build --hot",
     "assets:watch": "wp-scripts start --webpack-src-dir=./content/themes/assessment/assets/src/ --output-path=./content/themes/assessment/assets/build",
-    "env:init": "wp-env start && ./bin/wp.sh theme activate assessment && npm run assets:build && open http://localhost:8888/",
+    "env:clean": "wp-env clean all",
+    "env:init": "wp-env start -- --update",
     "env:destroy": "wp-env destroy",
+    "env:launch": "./bin/wp.sh theme activate assessment && open http://localhost:8888/",
     "env:logs": "wp-env logs",
     "env:restart": "wp-env stop && wp-env start",
     "env:start": "wp-env start",
