@@ -1,4 +1,7 @@
 .DS_Store
 node_modules/
-content/themes/assessment/assets/build
+content/index.php
 content/uploads/*
+content/plugins/*
+content/themes/*
+!content/themes/headless/*
