@@ -1,4 +1,7 @@
 .DS_Store
+.idea/*
 node_modules/
 content/themes/assessment/assets/build
 content/uploads/*
+content/plugins/*
+content/themes/twenty*

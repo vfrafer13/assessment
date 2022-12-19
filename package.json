@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "This is the assessment for incoming developers aimed toward experience with WordPress combined with a JavaScript-centric front-end.",
   "devDependencies": {
-    "@wordpress/env": "^4.6.0",
-    "@wordpress/scripts": "^23.0.0"
+    "@wordpress/env": "^5.8.0",
+    "@wordpress/scripts": "^25.0.0"
   },
   "engines": {
-    "node": "~16",
+    "node": "~18",
     "npm": "~8"
   },
   "scripts": {
