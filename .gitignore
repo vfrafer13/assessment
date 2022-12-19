@@ -1,7 +1,8 @@
 .DS_Store
 .idea/*
 node_modules/
-content/themes/assessment/assets/build
+content/index.php
 content/uploads/*
 content/plugins/*
-content/themes/twenty*
+content/themes/*
+!content/themes/headless/*
