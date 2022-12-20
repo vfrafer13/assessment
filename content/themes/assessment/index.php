@@ -13,6 +13,7 @@ get_header(); ?>
             Log in to admin at <a href="<?php echo esc_url( home_url( 'wp-admin' ) ); ?>">/wp-admin/</a>
             with username <strong>admin</strong> and password <strong>password</strong>.
         </div>
+        <div id="app"></div>
     </div>
 <?php
 get_footer();
