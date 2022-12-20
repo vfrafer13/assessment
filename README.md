@@ -12,7 +12,7 @@ Please follow the steps below and turn it in to us when you are done!
 > WARNING: This setup assumes a Linux-based system (Linux, macOS, Windows >= 10 w/ WSL) running node version ~18 with
 > npm version ~8 and Docker. If you have trouble running anything, it probably has something to do with the above.
 
-1. Clone this repo and cd into the directory.
+1. Fork this repo, clone it to your local and cd into the directory.
 1. Run `npm install`
 1. Run `npm run env:init`
 1. Run `npm run env:launch`
