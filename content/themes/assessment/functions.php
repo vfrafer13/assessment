@@ -64,4 +64,3 @@ function headless_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'headless_scripts' );
-
