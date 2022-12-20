@@ -1,6 +1,6 @@
-# Intermediate WordPress Assessment
+# Beginner WordPress Assessment
 
-This is the assessment for incoming developers aimed toward intermediate experience with WordPress.
+This is our standard assessment for incoming WordPress developers aimed toward basic experience with WordPress.
 
 Please follow the steps below and turn it in to us when you are done!
 
@@ -8,7 +8,7 @@ Please follow the steps below and turn it in to us when you are done!
 
 ## Setup
 
-> WARNING: This setup assumes a Linux-based system (Linux, macOS, Windows >= 10 w/ WSL) running node version ~16 with npm version ~8 and Docker. If you have trouble running anything, it probably has something to do with the above.
+> WARNING: This setup assumes a Linux-based system (Linux, macOS, Windows >= 10 w/ WSL) running node version ~18 with npm version ~8 and Docker. If you have trouble running anything, it probably has something to do with the above.
 
 1. Clone this repo and cd into the directory.
 1. Run `npm install`
@@ -32,31 +32,30 @@ If you need to run any wp-cli commands, it is available via either `npx wp-env r
   - Bonus points: Use wp-cli, or some automated way to do this.
 - [ ] Create a custom "Movie" post type and create 10 sample Movie posts.
   - [ ] Create a custom "Genre" taxonomy and attach it to the `movie` post type only.
-- [ ] Create a React app with a standard header w/ nav linking to pages, a standard footer, which talks to WordPress REST API. Create the following pages in the React app:
+- [ ] Update the `assessment` theme so it features the following:
   - [ ] Homepage - 5 Movie Posts
     - Each post should have a featured image, an excerpt and a link to the movie single post page.
     - Bonus points: infinite scroll or pagination.
   - [ ] Single Movie Post (Featured image, title, genre, full text)
-    - Bonus points: Showcase other movies.
+    - Bonus points: Showcase links to other movies.
   - [ ] Single Post (Featured image, author, title, text)
   - [ ] Single Page (Can be just title, author and text)
-  - Bonus points: Hot or live refresh.
-- [ ] Add SCSS compiling in and style your React app.
-  - Bonus points: Uglify your JavaScript/SCSS build
 - [ ] Add instructions on requirements, installation and running everything to your README file.
 
 ## Requirements
 
-- Your environment should run in Docker.
+- Ideally you'd use the @wordpress/env (Docker-based) setup so that we can all run this on our machines.
 - Any JavaScript libraries should be installed via package.json.
 - Add installation and instructions for running your code in your README.
+- I need to be able to independently run whatever you produce locally, so I can see the same result you want me to see.
 
 ## Preferences
 
 - Please don't include your whole database image (if you need to, you can include a database dump, like `dump.sql`).
 - The more automated the better (think fewer steps for the assessor to complete to get things working).
 
-## Bonus
+## Common Issues
 
-- Extend [@wordpress/scripts/config/webpack.config](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/#provide-your-own-webpack-config) and utilize as much WordPress-native JavaScript as possible.
-- Add a WordPress REST cache plugin for GET requests.
+* **I have an error about port 80 being in use.**
+
+    You likely already have something running on port 80. You can

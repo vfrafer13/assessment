@@ -1,5 +1,13 @@
 {
-    "mappings": {
-      "wp-content/": "./content/"
+  "core": "WordPress/WordPress#master",
+  "env": {
+    "tests": {
+      "port": 8888
     }
+  },
+  "mappings": {
+    "wp-content/": "./content/"
+  },
+  "phpVersion": "7.4",
+  "port": 80
 }
