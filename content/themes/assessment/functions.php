@@ -63,4 +63,53 @@ function headless_scripts() {
     }
 }
 
+function create_movies_post_type() {
+    register_post_type('movie',
+        array(
+            'labels' => array(
+                'name' => 'Movies',
+                'singular_name' => 'Movie',
+                'all_items' => "All Movies",
+                'add_new_item' => 'Add new Movie',
+            ), 
+            'public' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+        )  
+    );
+}
+
+function create_genre_taxonomy () { 
+    register_taxonomy("genre", 'movie',
+        array(
+            'labels' => array(
+                'name' => 'Genres',
+                'singular_name' => 'Genre',
+                'all_items' => "All Genres",
+                'add_new_item' => 'Add new Genre',
+                'edit_item' => "Edit Genre",
+            ), 
+            'public' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'public'                => false,
+            'show_ui'               => true,
+        ),
+    );
+}
+
+// Incluir Bootstrap CSS
+function bootstrap_css() {
+	wp_enqueue_style( 'bootstrap_css', 
+  					'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', 
+  					array(), 
+  					'4.1.3'
+  					); 
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_css');
+
+add_theme_support('post-thumbnails');
 add_action( 'wp_enqueue_scripts', 'headless_scripts' );
+add_action( 'init', 'create_movies_post_type');
+add_action( 'init', 'create_genre_taxonomy');
