@@ -35,7 +35,7 @@ the `./bin/wp.sh` which should make things a bit easier.
 - [ x] Clone or fork this repo, then establish a public repository where your code will live and can be viewed by us.
 - [ x] Create 5 sample posts and 5 pages inside WordPress.
     - [ x] Bonus points: Use wp-cli, or some automated way to do this.
-- [ s] Create a custom "Movie" post type and create 10 sample Movie posts.
+- [ x] Create a custom "Movie" post type and create 10 sample Movie posts.
     - [ x] Create a custom "Genre" taxonomy and attach it to the `movie` post type only.
 - [ x] Update the `assessment` theme so it features the following:
     - [ x] Homepage - 5 Movie Posts

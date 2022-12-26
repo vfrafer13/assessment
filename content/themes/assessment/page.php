@@ -6,6 +6,12 @@
 ?>
 <?php
 $post_id = $post->ID;
+$related_posts = get_posts(
+    [
+        "post_type" => ['page'],
+        "numberposts" => 5,
+    ]
+);
 get_header();
 ?>
     <div class="container">
@@ -20,21 +26,13 @@ get_header();
             <div class="col-md-2">
                 <div class="related-posts">
                     <h4>Related pages</h4>
-                    <?php
-                        $posts = get_posts(
-                            [
-                                "post_type" => ['page'],
-                                "numberposts" => 5,
-                            ]
-                        );
-                    ?>
                     <ul>
                         <?php
-                            foreach ($posts as $post) :
+                            foreach ($related_posts as $post) :
                                 $post_id = $post->ID;
                             ?>
                                 <a  href="<?php echo get_permalink( $post_id ); ?>">
-                                <li><?php  echo get_the_title( $post_id ); ?></li>
+                                    <li><?php  echo get_the_title( $post_id ); ?></li>
                                 </a>
                         <?php
                             endforeach;

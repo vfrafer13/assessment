@@ -63,43 +63,51 @@ function headless_scripts() {
     }
 }
 
+/**
+ * Register custom movie post type
+ */
 function create_movies_post_type() {
     register_post_type('movie',
         array(
             'labels' => array(
-                'name' => 'Movies',
+                'name'          => 'Movies',
                 'singular_name' => 'Movie',
-                'all_items' => "All Movies",
-                'add_new_item' => 'Add new Movie',
+                'all_items'     => "All Movies",
+                'add_new_item'  => 'Add new Movie',
             ), 
-            'public' => true,
-            'show_ui' => true,
-            'capability_type' => 'post',
-            'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+            'public'            => true,
+            'show_ui'           => true,
+            'capability_type'   => 'post',
+            'supports'          => array( 'title', 'editor', 'author', 'thumbnail'),
         )  
     );
 }
 
+/**
+ * Register custom genre taxonomy for movie post type
+ */
 function create_genre_taxonomy () { 
     register_taxonomy("genre", 'movie',
         array(
             'labels' => array(
-                'name' => 'Genres',
+                'name'          => 'Genres',
                 'singular_name' => 'Genre',
-                'all_items' => "All Genres",
-                'add_new_item' => 'Add new Genre',
-                'edit_item' => "Edit Genre",
+                'all_items'     => "All Genres",
+                'add_new_item'  => 'Add new Genre',
+                'edit_item'     => "Edit Genre",
             ), 
-            'public' => true,
+            'public'            => true,
             'show_admin_column' => true,
-            'hierarchical' => true,
-            'public'                => false,
-            'show_ui'               => true,
+            'hierarchical'      => true,
+            'public'            => false,
+            'show_ui'           => true,
         ),
     );
 }
 
-// Incluir Bootstrap CSS
+/**
+ * Include bootstrap css files
+ */
 function bootstrap_css() {
 	wp_enqueue_style( 'bootstrap_css', 
   					'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css', 

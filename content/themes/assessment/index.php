@@ -56,7 +56,7 @@ $posts = get_posts(
                                     $post_id = $post->ID;
                                 ?>
                                     <a  href="<?php echo get_permalink( $post_id ); ?>">
-                                    <li><?php  echo get_the_title( $post_id ); ?></li>
+                                        <li><?php  echo get_the_title( $post_id ); ?></li>
                                     </a>
                             <?php
                                 endforeach;

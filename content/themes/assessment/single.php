@@ -8,6 +8,13 @@
 $genres = get_the_terms($post->ID, 'genre');
 $post_id = $post->ID;
 $post_type = get_post_type();
+$related_posts = get_posts(
+    [
+        "post_type" => [$post_type],
+        "numberposts" => 5,
+        "order" => 'ASC'
+    ]
+);
 get_header();
 ?>
     <div class="container">
@@ -51,22 +58,13 @@ get_header();
             <div class="col-md-2">
                 <div class="related-posts">
                     <h4>Related <? echo ($post_type == 'movie' ? "movies" : "posts") ?></h4>
-                    <?php
-                        $posts = get_posts(
-                            [
-                                "post_type" => [$post_type],
-                                "numberposts" => 5,
-                                "order" => 'ASC'
-                            ]
-                        );
-                    ?>
                     <ul>
                         <?php
-                            foreach ($posts as $post) :
+                            foreach ($related_posts as $post) :
                                 $post_id = $post->ID;
                             ?>
                                 <a  href="<?php echo get_permalink( $post_id ); ?>">
-                                <li><?php  echo get_the_title( $post_id ); ?></li>
+                                    <li><?php  echo get_the_title( $post_id ); ?></li>
                                 </a>
                         <?php
                             endforeach;
