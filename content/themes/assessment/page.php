@@ -28,13 +28,18 @@ get_header();
                     <h4>Related pages</h4>
                     <ul>
                         <?php
-                            foreach ($related_posts as $post) :
-                                $post_id = $post->ID;
+                            foreach ($related_posts as $rel_post) :
+                                $rel_post_id = $rel_post->ID;
                             ?>
-                                <a  href="<?php echo get_permalink( $post_id ); ?>">
-                                    <li><?php  echo get_the_title( $post_id ); ?></li>
-                                </a>
-                        <?php
+                            <?php 
+                                $permalink = get_permalink ( $rel_post_id );
+                                if($permalink !== get_permalink( $post_id ) || count($related_posts) == 1):
+                                    ?>
+                                    <a  href="<?php echo $permalink; ?>">
+                                        <li><?php  echo get_the_title( $rel_post_id ); ?></li>
+                                    </a>
+                            <?php
+                                endif;
                             endforeach;
                         ?>
                     <ul>
