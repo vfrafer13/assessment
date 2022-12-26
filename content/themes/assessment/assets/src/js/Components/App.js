@@ -5,7 +5,7 @@
 const App = () => {
     return (
         <div className="assessment-app">
-            Assessment app.
+            This is a custom blog for the assessment app.
         </div>
     )
 }
