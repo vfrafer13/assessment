@@ -23,10 +23,11 @@ get_header();
         echo the_content();
         if ($post_type == 'movie') {
             if ($genres != null ) {
+                echo '<h6>Genre(s):</h6><ul>';
                 foreach ( $genres as $genre ) {
-                    echo '<h6>Genre(s): <i>'.$genre->name;
+                    echo '<li><i>'.$genre->name.'</i></li>';
                 } 
-                echo "</i></h6>";
+                echo '</ul>';
             }
         }
         ?>
