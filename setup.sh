@@ -72,7 +72,7 @@ result=`npx wp-env run cli "post create --post_type=movie --post_title='Spencer'
 addExtraDetailsToPost "${result}" "${image}" '"drama"'
 
 echo "###### Creating movie post for The Piano"
-image="https://thatmomentin.com/wp-content/uploads/2016/04/tumblr_n88atblDfh1tus777o3_1280.png"
+image="https://i.ytimg.com/vi/KBVNbto_SqI/maxresdefault.jpg"
 post_excerpt="In the mid-19th century a mute woman is sent to New Zealand along with her young daughter and prized piano for an arranged marriage to a farmer, but is soon lusted after by a farm worker."
 result=`npx wp-env run cli "post create --post_type=movie --post_title='The Piano' --post_author='${author}' --post_status=publish --post_excerpt='${post_excerpt}' --post_content='${post_excerpt} ${post_content}' --porcelain"`
 addExtraDetailsToPost "${result}" "${image}" '"romance","drama"'
