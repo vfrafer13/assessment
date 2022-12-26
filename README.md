@@ -32,20 +32,26 @@ the `./bin/wp.sh` which should make things a bit easier.
 
 ## Steps
 
-- [ ] Clone or fork this repo, then establish a public repository where your code will live and can be viewed by us.
-- [ ] Create 5 sample posts and 5 pages inside WordPress.
-    - Bonus points: Use wp-cli, or some automated way to do this.
-- [ ] Create a custom "Movie" post type and create 10 sample Movie posts.
-    - [ ] Create a custom "Genre" taxonomy and attach it to the `movie` post type only.
-- [ ] Update the `assessment` theme so it features the following:
-    - [ ] Homepage - 5 Movie Posts
-        - Each post should have a featured image, an excerpt and a link to the movie single post page.
-        - Bonus points: infinite scroll or pagination.
-    - [ ] Single Movie Post (Featured image, title, genre, full text)
-        - Bonus points: Showcase links to other movies.
-    - [ ] Single Post (Featured image, author, title, text)
-    - [ ] Single Page (Can be just title, author and text)
-- [ ] Add instructions on requirements, installation and running everything to your README file.
+- [ x] Clone or fork this repo, then establish a public repository where your code will live and can be viewed by us.
+- [ x] Create 5 sample posts and 5 pages inside WordPress.
+    - [ x] Bonus points: Use wp-cli, or some automated way to do this.
+- [ s] Create a custom "Movie" post type and create 10 sample Movie posts.
+    - [ x] Create a custom "Genre" taxonomy and attach it to the `movie` post type only.
+- [ x] Update the `assessment` theme so it features the following:
+    - [ x] Homepage - 5 Movie Posts
+        - [ x]Each post should have a featured image, an excerpt and a link to the movie single post page.
+        - [ ]Bonus points: infinite scroll or pagination.
+    - [ x] Single Movie Post (Featured image, title, genre, full text)
+        - [ x]Bonus points: Showcase links to other movies.
+    - [ x] Single Post (Featured image, author, title, text)
+    - [ x] Single Page (Can be just title, author and text)
+- [ x] Add instructions on requirements, installation and running everything to your README file.
+
+## Testing steps
+- After setting up the project per the instructions in the `Setup` section above.
+- Run `./setup.sh` to fill your database with starting authors, images, posts, pages, and genres.
+    - If the script returns an error, try to update your permissions first with `chmod +x setup.sh`.
+- Navigate to http://localhost:8888/ and that's it! Have a look at the different posts and pages on the site.
 
 ## Requirements
 
