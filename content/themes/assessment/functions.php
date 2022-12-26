@@ -102,9 +102,9 @@ function create_genre_taxonomy () {
 // Incluir Bootstrap CSS
 function bootstrap_css() {
 	wp_enqueue_style( 'bootstrap_css', 
-  					'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', 
+  					'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css', 
   					array(), 
-  					'4.1.3'
+  					'5.2.3'
   					); 
 }
 add_action( 'wp_enqueue_scripts', 'bootstrap_css');
