@@ -5,30 +5,35 @@ body {
 .assessment-app {
     background: rgb(176, 215, 227);
     padding: 20px;
-    margin-bottom: 30px;
+    margin-top: 50px;
     font-size: small;
 }
 
 .card {
-    margin-top: 20px;
+    margin: 20px;
     background-color: white;
     padding: 50px;
     color: black;
 }
 
-.card > img {
+.post-list a:not(:hover) {
+    text-decoration: none;
+}
+
+img {
     background-color: #F1EDE9;
     margin-top: 20px;
     padding: 20px;
     max-width: 600px;
 }
 
-.card > h5,p {
-    padding: 20px;
-    max-width: 70%;
+.card > h5, h6, p {
+    padding-top: 20px;
 }
 
-.related-posts, .backhome {
+.backhome {
     padding: 20px;
 }
+
+
 

@@ -10,50 +10,71 @@ $post_id = $post->ID;
 $post_type = get_post_type();
 get_header();
 ?>
-    <div id="app"></div>
-    <a href="<?php echo esc_url( home_url() )?>" class="text-left backhome">Home</a>
-    <div class="card align-items-center">
-        <h2 class="text-lg-center text-uppercase"><?php echo get_the_title() ?></h1>
-        <?php 
-        if($post_type != 'movie') {
-            echo "<b>By: ".get_the_author_meta('display_name', $post->post_author)."</b>";
-        }
-        if (has_post_thumbnail($post_id)) { 
-            echo '<img class="img-responsive" src="'.get_the_post_thumbnail_url( $post_id ).'"></img>';
-        }
-        echo the_content();
-        if ($post_type == 'movie') {
-            if ($genres != null ) {
-                echo '<h6>Genre(s):</h6><ul>';
-                foreach ( $genres as $genre ) {
-                    echo '<li><i>'.$genre->name.'</i></li>';
-                } 
-                echo '</ul>';
-            }
-        }
-        ?>
-    </div>
-    <div class="related-posts">
-        <h4>Related <? echo ($post_type == 'movie' ? "movies" : "links") ?></h4>
-        <?php
-            $posts = get_posts(
-                [
-                    "post_type" => [$post_type],
-                    "numberposts" => 5,
-                    "order" => 'ASC'
-                ]
-            );
-        ?>
-        <ul>
-            <?php
-                foreach ($posts as $post) {
-                    $post_id = $post->ID;
-                    echo '<a class="align-items-center" href="'.get_permalink( $post_id ).'">';
-                    echo '<li>'.get_the_title( $post_id ).'</li>';
-                    echo '</a>';
-                }
-            ?>
-        <ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="text-center">
+                    <h2 class="text-uppercase"><?php echo get_the_title() ?></h2>
+                    <?php 
+                        if($post_type != 'movie') :
+                    ?>
+                        <p><b>By <?php echo get_the_author_meta('display_name', $post->post_author);?></b></p>
+                    <?php endif;
+                    ?>
+                    <?php
+                        if (has_post_thumbnail($post_id)) :
+                    ?> 
+                        <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url( $post_id );?>"></img>
+                    <?php endif;
+                    ?>
+                </div>
+                <?php echo the_content(); ?>
+                <?php 
+                    if ($post_type == 'movie') :
+                        if ($genres != null ) :
+                        ?>
+                            <h6>Genre(s):</h6>
+                            <p class="p-0">
+                            <?php 
+                                foreach ( $genres as $genre ) :
+                            ?>
+                                <i><?php echo $genre->name;?></i></br>
+                            <?php 
+                                endforeach;
+                            ?>
+                            </p>
+                    <?php 
+                        endif;
+                    endif;
+                    ?>
+            </div>
+            <div class="col-md-2">
+                <div class="related-posts">
+                    <h4>Related <? echo ($post_type == 'movie' ? "movies" : "posts") ?></h4>
+                    <?php
+                        $posts = get_posts(
+                            [
+                                "post_type" => [$post_type],
+                                "numberposts" => 5,
+                                "order" => 'ASC'
+                            ]
+                        );
+                    ?>
+                    <ul>
+                        <?php
+                            foreach ($posts as $post) :
+                                $post_id = $post->ID;
+                            ?>
+                                <a  href="<?php echo get_permalink( $post_id ); ?>">
+                                <li><?php  echo get_the_title( $post_id ); ?></li>
+                                </a>
+                        <?php
+                            endforeach;
+                        ?>
+                    <ul>
+                </div>
+            </div>
+        </div>
     </div>
 <?php
 get_footer();
