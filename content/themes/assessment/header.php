@@ -16,5 +16,12 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<div id="content" class="site-content">
-		<section id="primary" class="content-area">
+		<section id="primary" class="content-area ps-4 mt-4">
 			<main id="main" class="site-main" role="main">
+				<?php 
+					if(!is_home()) :
+				?>
+					<a href="<?php echo esc_url( home_url() )?>" class="text-left">Back to Homepage</a>
+				<?php
+					endif;
+				?>

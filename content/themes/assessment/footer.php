@@ -4,11 +4,9 @@
  */
 
 ?>
-			</main><!-- #main -->
-		</section><!-- #primary -->
-	</div><!-- #content -->
-
-<?php wp_footer(); ?>
-
-</body>
+				</main><!-- #main -->
+			</section><!-- #primary -->
+		</div><!-- #content -->
+		<div id="app"></div>
+	</body>
 </html>
