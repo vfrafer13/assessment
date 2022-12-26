@@ -38,6 +38,7 @@ get_header();
                 [
                     "post_type" => [$post_type],
                     "numberposts" => 5,
+                    "order" => 'ASC'
                 ]
             );
         ?>
