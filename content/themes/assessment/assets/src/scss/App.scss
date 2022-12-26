@@ -10,6 +10,7 @@ body {
 }
 
 .card {
+    margin-top: 20px;
     background-color: white;
     padding: 50px;
     color: black;
@@ -27,6 +28,7 @@ body {
     max-width: 70%;
 }
 
-.related-posts {
+.related-posts, .backhome {
     padding: 20px;
 }
+

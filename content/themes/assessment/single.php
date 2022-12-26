@@ -11,6 +11,7 @@ $post_type = get_post_type();
 get_header();
 ?>
     <div id="app"></div>
+    <a href="<?php echo esc_url( home_url() )?>" class="text-left backhome">Home</a>
     <div class="card align-items-center">
         <h2 class="text-lg-center text-uppercase"><?php echo get_the_title() ?></h1>
         <?php 
